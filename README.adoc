@@ -1,0 +1,3 @@
+= Architecture description templates and examples
+
+Reusable architecture description artifacts.

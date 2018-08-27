@@ -1,0 +1,37 @@
+= Context View
+
+== Scope and Responsibilities
+
+Any capability of the system X not explicitly listed in this section is by default exluded from the system scope
+and as such will not be part of the design of the system in place.
+
+For clarity, this section can contain some specific capability exclusions, although, as stated above, any capability
+which is not explicitly listed in this section should be considered excluded from the system scope.
+
+The scope definition for the system X includes following key capabilities and requirements:
+
+* C1 - System shall provide logging capability by writing system relevant events into system local log files.
++
+System relevan events are any warnings, errors or exceptions which occure within system process.
++
+System local log files is textual file allocated on the same phisical or virtual machine running the system process.
++
+Format of the logging statements written into the log file by the system is not explicitly defined and is left arbitrary as long as it contains sufficient information for translation into central logging system.
+
+== External entities
+
+Identified external entities to the system and its responsibilities are following:
+
+* E1 - Central logging system
++
+It is responsible for collecting and presenting logging statements from multiple system instances
+send by its corresponding central logging system agent instance.
+
+* E2 - Central logging system agent
++
+It is responsible to collect, filter and transform individual system instance logging statements and send them to central logging system.
+
+* E3 - System Operations Team Member
++
+It is responsible for monitoring central logging system and editing system instance logging configuration properties
+

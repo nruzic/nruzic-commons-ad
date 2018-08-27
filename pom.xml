@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.nruzic</groupId>
+        <artifactId>maven-master</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.github.nruzic</groupId>
+    <artifactId>ad</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>ad</name>
+    <description>Architecture description templates</description>
+    <url>http://github.com/nruzic/ad</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    
+    <scm>
+        <url>http://github.com/nruzic/ad</url>
+        <connection>scm:git:http://github.com/nruzic/ad.git</connection>
+        <developerConnection>scm:git:https://github.com/nruzic/ad.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>doRelease</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctor-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
