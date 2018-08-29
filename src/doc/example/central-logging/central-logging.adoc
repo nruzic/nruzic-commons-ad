@@ -1,1 +1,0 @@
-= Central Logging Architecture Description
