@@ -60,4 +60,3 @@ and send them to central logging system.
 * E3 - System Operations Team Member
 +
 It is responsible for monitoring central logging system and editing system instance logging configuration properties
-
