@@ -1,144 +1,157 @@
-= Architecture Description
-
-//
-////
-//    ============================================================================================================   //
-//                                                                                                                   //
-//    Copyright 2019 Nikola Ruzic                                                                                    //
-//                                                                                                                   //
-//    Permission is hereby granted, free of charge, to any person obtaining a copy of this software                  //
-//    and associated documentation files (the "Software"), to deal in the Software without restriction,              //
-//    including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,          //
-//    and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,          //
-//    subject to the following conditions:                                                                           //
-//                                                                                                                   //
-//    The above copyright notice and this permission notice shall be included in all copies or substantial           //
-//    portions of the Software.                                                                                      //
-//                                                                                                                   //
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING                  //
-//    BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.    //
-//    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,        //
-//    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE   //
-//    OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                                                                  //
-//                                                                                                                   //
-//    ============================================================================================================   //
-////
+= My project Architecture Description
 
 == Document control
+N/A
 
 == Table of contents
+N/A
 
 == Introduction/Executive Summary/Abstract
-
-objectives of the document
-
-goals of the system
-
-scope and key requirements
-
-overview of the solution
-
-benefits of the solution
-
-risk and mitigation strategies of the solution
-
-key decisions
-
-outstanding issues
+****
+* objectives of the document
+* goals of the system
+* scope and key requirements
+* overview of the solution
+* benefits of the solution
+* risk and mitigation strategies of the solution
+* key decisions
+* outstanding issues
+****
+N/A
 
 == Stakeholders
-
+****
 list stakeholders and their concerns
+****
+N/A
 
-== General Architectural principles
+== General Architectural Principles
+****
+* list principles
+** give rationale and implications for each principle
+** map back to business drivers
+** map forward to architectural design decisions
+****
+N/A
 
- list principles
+=== AP1 - Solution should be generic
 
-give rationale and implications for each principle
+Solution provided in this document should be valid for any product pulled from Workflow Tools system.
 
-map back to business drivers
-
-map forward to architectural design decisions
+Although all products are different, they all consist of similar processing pipeline: pull, enrich, validate, transform, make client projections and send it to the client.
+We want solution that will work for any product with minium amount of customization to foster fast delivery of new products.
 
 == Architectural design decisions
+****
+* List and describe key design decisions
+** Give rationale for each decision, document alternatives considered and explain why they were rejected
+****
 
-List and describe key design decisions
+=== AD1 - Data pulled from WFT will be grouped by (Company ID, Reporting Year) tuple
 
-give rationale for each decision, document alternatives considered
-and explain why they were rejected
+Unique record identifier for all products shall be Company ID and Reporting Year.
+All data needed for manipulating particular record will reside within that record.
+
+It is easier to implement quality checks and transformation rules if all data needed for a computation is within the record.
+
 
 == Viewpoints
-
-define viewpoints on which your views are based upon
-
-use external references
+****
+Define viewpoints on which your views are based upon. Use external references.
+****
+N/A
 
 == Views
 
 === Context View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Functional View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Information View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Concurrency View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Development View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Deployment View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 === Operations View
-====  Principles
-====  Models
-====  Perspective improvements
-====  Scenarios
-====  Decisions
-====  Comments
+****
+* Principles
+* Models
+* Perspective improvements
+* Scenarios
+* Decisions
+* Comments
+****
+N/A
 
 == Quality Property Summary
-
-general insights
-
-non view specific artifacts
+****
+* General insights
+* Non view specific artifacts
+****
+N/A
 
 == Important Scenarios
+N/A
 
 == Issues Awaiting Resolution
+N/A
 
 == Appendices
+N/A
