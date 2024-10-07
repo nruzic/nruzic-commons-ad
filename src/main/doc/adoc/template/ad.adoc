@@ -34,26 +34,12 @@ N/A
 ****
 N/A
 
-=== AP1 - Solution should be generic
-
-Solution provided in this document should be valid for any product pulled from Workflow Tools system.
-
-Although all products are different, they all consist of similar processing pipeline: pull, enrich, validate, transform, make client projections and send it to the client.
-We want solution that will work for any product with minium amount of customization to foster fast delivery of new products.
-
 == Architectural design decisions
 ****
 * List and describe key design decisions
 ** Give rationale for each decision, document alternatives considered and explain why they were rejected
 ****
-
-=== AD1 - Data pulled from WFT will be grouped by (Company ID, Reporting Year) tuple
-
-Unique record identifier for all products shall be Company ID and Reporting Year.
-All data needed for manipulating particular record will reside within that record.
-
-It is easier to implement quality checks and transformation rules if all data needed for a computation is within the record.
-
+N/A
 
 == Viewpoints
 ****
